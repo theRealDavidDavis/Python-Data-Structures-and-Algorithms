@@ -24,24 +24,15 @@ def binary_search(data, target_value, upper, lower=0, dimensionality=False, recu
             recursive = True
 
     if dimensionality == True:
-        print('1.1')
         if upper < lower:
-            print('1.1.1')
             return False
         else:
-            print('1.2')
             mid = (upper + lower) // 2
-            print(mid)
-            print(data[mid])
             if target_value == data[mid]:
-                print('1.2.1')
                 return True
             elif target_value > data[mid]:
-                print('1.2.2')
                 return binary_search(data, target_value, upper, mid+1, dimensionality, recursive)
             else:
-                print('1.2.3')
                 return binary_search(data, target_value, mid-1, lower, dimensionality, recursive)
     else:
-        print('2.1')
         return False
