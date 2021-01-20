@@ -2,7 +2,7 @@
 
 def binary_search(data, target_value, upper, lower=0, dimensionality=False, recursive=False):
     """
-    Recursive search function.
+    Recursive search function which assumes the input of a sorted list.
 
     Returns true if the target value is found within the defined search parameters of the list.
 
