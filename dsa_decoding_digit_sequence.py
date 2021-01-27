@@ -9,7 +9,12 @@ def decode(sequence):
 
     for i in range(digits-1):
         if list_num[i] < 3:
-            if list_num[i+1] < 7:
+            if list_num[i] == 2:
+                if list_num[i+1] < 7:
+                    tmp = str(list_num[i]) + str(list_num[i+1])
+                    list_num.append(int(tmp))
+                    possibilities += 1
+            else:
                 tmp = str(list_num[i]) + str(list_num[i+1])
                 list_num.append(int(tmp))
                 possibilities += 1
